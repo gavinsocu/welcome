@@ -61,7 +61,7 @@
 <div class="two" ref="two" @wheel="handleScroll2" @touchmove="handleScroll2">
   
   <div class="tt" >
-    <div  @click="changeImage" class="img">
+    <div :style="{ backgroundImage: 'url(' + require('./img/join.jpg') + ')' }"  @click="changeImage" class="img">
   </div>
 <!-- ' + currentImage + ' -->
 
@@ -487,14 +487,12 @@ button{
   cursor: pointer;
 }
 .img{
-  background: url(./img/1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 80vw;
   height: 80vh;
   z-index: 333;
-  
 }
 .tt{
     background-image: linear-gradient(to right top, #e87096, #ff8278, #ffa159, #f2c648, #c8eb5b);
