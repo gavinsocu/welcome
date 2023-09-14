@@ -61,9 +61,9 @@
 <div class="two" ref="two" @wheel="handleScroll2" @touchmove="handleScroll2">
   
   <div class="tt" >
-    <div :style="{ backgroundImage: 'url( ' + currentImage + ')' }"  @click="changeImage" class="img">
+    <div :style="{ backgroundImage: 'url(' + currentImage + ')' }"  @click="changeImage" class="img">
   </div>
-<!-- ' + currentImage + ' -->
+
 
   
   
@@ -79,16 +79,15 @@
     data(){
       return{
       images:[
-      require('./img/1.jpg'),
-      require('./img/2.jpg'),
-      require('./img/3.jpg'),
-      require('./img/4.png'),
-      require('./img/5.jpg'),
-      require('./img/6.jpg'),
-      require('./img/7.jpg'),     
-      require('./img/8.jpg'),
-      require('./img/9.png'),
-
+        '/src/img/1.jpg',
+        '/src/img/2.jpg',
+        '/src/img/3.jpg',
+        '/src/img/4.png',
+        '/src/img/5.jpg',
+        '/src/img/6.jpg',
+        '/src/img/7.jpg',
+        '/src/img/8.jpg',
+        '/src/img/9.png'
 
       ],
       currentIndex: 0,
@@ -214,7 +213,7 @@
   
   </script> 
   <style>
-  .a{
+  .jkl{
     background: url(./img/1.jpg);
     background: url(./img/2.jpg);
     background: url(./img/3.jpg);
