@@ -12,7 +12,7 @@
  <div class="header" ref="one" @wheel="handleScroll1" @touchmove="handleScroll33">
   <div class="inner-header flex">
     <div class="yno">
-        <div class="nnn"><div class="typed-out"><p class="kkk">准备好加入网络协会了吗？</p></div>
+        <div class="nnn"><div class="typed-out"><p class="kkk">是否准备好加入<br>网络协会 || ACM协会</p></div>
           <div class="bu">  
             <button class="ll1" @click="isHandle"> 准备好了</button><button class="ll2" @click="openDialog">我再想想</button>
             <dialog id="dog" ref="dog">
@@ -56,11 +56,14 @@
   </div>
 </div>
 <div class="content flex">
-  <p>网络协会 | ACM协会</p>
+  <div class="nalogo"></div>
+  <h2>网络协会 | ACM协会</h2>
+  <div class="acmlogo"></div>
 </div>
 <div class="two" ref="two" @wheel="handleScroll2" @touchmove="handleScroll11">
   
   <div class="tt" >
+    <h2 class="ooo">点击图片刷新</h2>
     <div :style="{ backgroundImage: 'url(' + currentImage + ')' }"  @click="changeImage" class="img">
   </div>
 
@@ -554,8 +557,9 @@ button{
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 80vw;
-  height: 80vh;
+  width: 300px;
+  height: 300px;
+  float: bottom;
   z-index: 333;
 }
 .tt{
@@ -566,7 +570,30 @@ button{
     justify-content: center;
     align-items: center;
     bottom: 0;
+    text-align: center;
+    flex-direction: column;
   }
+.nalogo{
+  background: url(./img/logo.jpg);
+  float: left;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  margin-right: 20px;
+}
+.acmlogo{
+  background: url(./img/acmlogo.jpg);
+  float: right;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  margin-left: 20px;
+}
+.ooo{
+  margin-bottom: 10px;
   
+}
 </style>
 
