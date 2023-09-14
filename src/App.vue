@@ -9,7 +9,7 @@
   </div>
 </div>
 
- <div class="header" ref="one" @wheel="handleScroll1" @touchmove="handleScroll1">
+ <div class="header" ref="one" @wheel="handleScroll1" @touchmove="handleScroll33">
   <div class="inner-header flex">
     <div class="yno">
         <div class="nnn"><div class="typed-out"><p class="kkk">准备好加入网络协会了吗？</p></div>
