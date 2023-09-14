@@ -73,21 +73,30 @@
 </div>
 </template> 
 <script>
+import image1 from './img/1.jpg';
+import image2 from './img/2.jpg';
+import image3 from './img/3.jpg';
+import image4 from './img/4.png';
+import image5 from './img/5.jpg';
+import image6 from './img/6.jpg';
+import image7 from './img/7.jpg';
+import image8 from './img/8.jpg';
+import image9 from './img/9.png';
 
   export default { 
     
     data(){
       return{
       images:[
-        '/src/img/1.jpg',
-        '/src/img/2.jpg',
-        '/src/img/3.jpg',
-        '/src/img/4.png',
-        '/src/img/5.jpg',
-        '/src/img/6.jpg',
-        '/src/img/7.jpg',
-        '/src/img/8.jpg',
-        '/src/img/9.png'
+        image1,
+        image2,
+        image3,
+        image4,
+        image5,
+        image6,
+        image7,
+        image8,
+        image9,
 
       ],
       currentIndex: 0,
@@ -213,17 +222,6 @@
   
   </script> 
   <style>
-  .jkl{
-    background: url(./img/1.jpg);
-    background: url(./img/2.jpg);
-    background: url(./img/3.jpg);
-    background: url(./img/4.png);
-    background: url(./img/5.jpg);
-    background: url(./img/6.jpg);
-    background: url(./img/7.jpg);
-    background: url(./img/8.jpg);
-    background: url(./img/9.png);
-  }
   .host{
     position: relative;
   }
