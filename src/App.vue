@@ -220,7 +220,7 @@ import image9 from './img/9.png';
     handleScroll11(event) {
       const touch = event.touches[0]; // 获取第一个触摸点的信息
       const deltaY = touch.pageY - this.startY; // 计算Y轴滑动的距离
-      if(this.isOpen){
+      if(this.isOpen &&this.isGetTop){
       if (deltaY < 0) {
         // 向上滑动
         this.isScrollingUp = true;
@@ -237,7 +237,7 @@ import image9 from './img/9.png';
     handleScroll22(event) {
       const touch = event.touches[0]; // 获取第一个触摸点的信息
       const deltaY = touch.pageY - this.startY; // 计算Y轴滑动的距离
-      if(this.isOpen){
+      if(this.isOpen && this.isGetTop){
       if (deltaY < 0) {
         // 向上滑动
         this.isScrollingUp = true;
@@ -253,7 +253,7 @@ import image9 from './img/9.png';
     handleScroll33(event) {
       const touch = event.touches[0]; // 获取第一个触摸点的信息
       const deltaY = touch.pageY - this.startY; // 计算Y轴滑动的距离
-      if(this.isOpen){
+      if(this.isOpen && this.isGetTop){
       if (deltaY < 0) {
         // 向上滑动
         this.isScrollingUp = true;
