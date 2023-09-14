@@ -220,7 +220,7 @@ import image9 from './img/9.png';
     handleScroll11(event) {
       const touch = event.touches[0]; // 获取第一个触摸点的信息
       const deltaY = touch.pageY - this.startY; // 计算Y轴滑动的距离
-
+      if(this.isOpen){
       if (deltaY < 0) {
         // 向上滑动
         this.isScrollingUp = true;
@@ -230,13 +230,14 @@ import image9 from './img/9.png';
         this.isScrollingUp = false;
         this.$refs.two.style.height = '0'; // 修改内部样式
       }
+    }
 
       this.startY = touch.pageY; // 更新起始滑动位置
     },
     handleScroll22(event) {
       const touch = event.touches[0]; // 获取第一个触摸点的信息
       const deltaY = touch.pageY - this.startY; // 计算Y轴滑动的距离
-
+      if(this.isOpen){
       if (deltaY < 0) {
         // 向上滑动
         this.isScrollingUp = true;
@@ -246,7 +247,25 @@ import image9 from './img/9.png';
         this.isScrollingUp = false;
         this.$refs.three.style.height = '100vh'; // 修改内部样式
       }
-
+    }
+      this.startY = touch.pageY; // 更新起始滑动位置
+    },
+    handleScroll33(event) {
+      const touch = event.touches[0]; // 获取第一个触摸点的信息
+      const deltaY = touch.pageY - this.startY; // 计算Y轴滑动的距离
+      if(this.isOpen){
+      if (deltaY < 0) {
+        // 向上滑动
+        this.isScrollingUp = true;
+        this.$refs.three.style.height = '0'; // 修改内部样式
+        this.$refs.two.style.height = '100vh';
+      } else {
+        // 向下滑动
+        this.isScrollingUp = false;
+        this.$refs.three.style.height = '100vh'; // 修改内部样式
+        this.$refs.two.style.height = '0';
+      }
+    }
       this.startY = touch.pageY; // 更新起始滑动位置
     },
     onTouchStart(event) {
