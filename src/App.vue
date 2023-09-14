@@ -309,7 +309,7 @@ import image9 from './img/9.png';
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* background: url(./img/jion.jpg); */
+    background: url(./img/join2.jpg);
     background-size: cover;
     object-fit: cover;
     background-position: center center;
