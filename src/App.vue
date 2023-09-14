@@ -1,6 +1,6 @@
 <template> 
 <div class="host" >
-<div class="three" ref="three" @wheel="handleScroll">
+<div class="three" ref="three" @wheel="handleScroll" @touchmove="handleScroll">
   <div class="card">
     <h2 class="bai">网协干事工作证</h2>
     <div class="zqi aaa"><span class="zi">姓名</span><span class="you">{{ Worker[0].name }}</span></div><br>
@@ -9,7 +9,7 @@
   </div>
 </div>
 
- <div class="header" ref="one" @wheel="handleScroll1">
+ <div class="header" ref="one" @wheel="handleScroll1" @touchmove="handleScroll1">
   <div class="inner-header flex">
     <div class="yno">
         <div class="nnn"><div class="typed-out"><p class="kkk">准备好加入网络协会了吗？</p></div>
@@ -58,7 +58,7 @@
 <div class="content flex">
   <p>网络协会 | ACM协会</p>
 </div>
-<div class="two" ref="two" @wheel="handleScroll2">
+<div class="two" ref="two" @wheel="handleScroll2" @touchmove="handleScroll2">
   
   <div class="tt" >
     <div :style="{ backgroundImage: 'url(' + currentImage + ')' }"  @click="changeImage" class="img">
