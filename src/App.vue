@@ -61,9 +61,9 @@
 <div class="two" ref="two" @wheel="handleScroll2" @touchmove="handleScroll2">
   
   <div class="tt" >
-    <div :style="{ backgroundImage: 'url(' + currentImage + ')' }"  @click="changeImage" class="img">
+    <div :style="{ backgroundImage: 'url(/src/img/jion.jpg)' }"  @click="changeImage" class="img">
   </div>
-
+<!-- 'url(' + currentImage + ')' -->
 
   
   
