@@ -1,6 +1,6 @@
 <template> 
 <div class="host" >
-<div class="three" ref="three" @wheel="handleScroll" @touchmove="handleScroll">
+<div class="three" ref="three" @wheel="handleScroll" @touchmove="handleScroll22">
   <div class="card">
     <h2 class="bai">网协干事工作证</h2>
     <div class="zqi aaa"><span class="zi">姓名</span><span class="you">{{ Worker[0].name }}</span></div><br>
@@ -58,7 +58,7 @@
 <div class="content flex">
   <p>网络协会 | ACM协会</p>
 </div>
-<div class="two" ref="two" @wheel="handleScroll2" @touchmove="handleScroll2">
+<div class="two" ref="two" @wheel="handleScroll2" @touchmove="handleScroll11">
   
   <div class="tt" >
     <div :style="{ backgroundImage: 'url(' + currentImage + ')' }"  @click="changeImage" class="img">
@@ -216,6 +216,42 @@ import image9 from './img/9.png';
     },
     changeImage() {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
+    },
+    handleScroll11(event) {
+      const touch = event.touches[0]; // 获取第一个触摸点的信息
+      const deltaY = touch.pageY - this.startY; // 计算Y轴滑动的距离
+
+      if (deltaY < 0) {
+        // 向上滑动
+        this.isScrollingUp = true;
+        this.$refs.two.style.height = '100vh'; // 修改内部样式
+      } else {
+        // 向下滑动
+        this.isScrollingUp = false;
+        this.$refs.two.style.backgroundColor = '0'; // 修改内部样式
+      }
+
+      this.startY = touch.pageY; // 更新起始滑动位置
+    },
+    handleScroll22(event) {
+      const touch = event.touches[0]; // 获取第一个触摸点的信息
+      const deltaY = touch.pageY - this.startY; // 计算Y轴滑动的距离
+
+      if (deltaY < 0) {
+        // 向上滑动
+        this.isScrollingUp = true;
+        this.$refs.three.style.height = '0'; // 修改内部样式
+      } else {
+        // 向下滑动
+        this.isScrollingUp = false;
+        this.$refs.three.style.backgroundColor = '100vh'; // 修改内部样式
+      }
+
+      this.startY = touch.pageY; // 更新起始滑动位置
+    },
+    onTouchStart(event) {
+      const touch = event.touches[0]; // 获取第一个触摸点的信息
+      this.startY = touch.pageY; // 记录起始滑动位置
     }
   }
 }
