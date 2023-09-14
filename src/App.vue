@@ -228,7 +228,7 @@ import image9 from './img/9.png';
       } else {
         // 向下滑动
         this.isScrollingUp = false;
-        this.$refs.two.style.backgroundColor = '0'; // 修改内部样式
+        this.$refs.two.style.height = '0'; // 修改内部样式
       }
 
       this.startY = touch.pageY; // 更新起始滑动位置
@@ -244,7 +244,7 @@ import image9 from './img/9.png';
       } else {
         // 向下滑动
         this.isScrollingUp = false;
-        this.$refs.three.style.backgroundColor = '100vh'; // 修改内部样式
+        this.$refs.three.style.height = '100vh'; // 修改内部样式
       }
 
       this.startY = touch.pageY; // 更新起始滑动位置
