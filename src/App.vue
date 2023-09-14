@@ -65,6 +65,7 @@
   <div class="tt" >
     <h2 class="ooo">点击图片刷新</h2>
     <div :style="{ backgroundImage: 'url(' + currentImage + ')' }"  @click="changeImage" class="img">
+      <h2 class="ooo1">扫码加入干事群</h2>
   </div>
 
 
@@ -593,6 +594,11 @@ button{
 }
 .ooo{
   margin-bottom: 10px;
+  color: #999;
+  
+}
+.ooo1{
+  margin-top: 310px;
   
 }
 </style>
