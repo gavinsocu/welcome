@@ -573,6 +573,7 @@ button{
     bottom: 0;
     text-align: center;
     flex-direction: column;
+    position: relative;
   }
 .nalogo{
   background: url(./img/logo.jpg);
@@ -598,8 +599,10 @@ button{
   
 }
 .ooo1{
-  margin-top: 310px;
   
+  position: absolute;
+  bottom: 150px;
+  margin-left:68px ;
 }
 </style>
 
