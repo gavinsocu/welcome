@@ -1,6 +1,6 @@
 <template> 
 <div class="host" >
-<div class="three" ref="three" @wheel="handleScroll" @touchmove="handleScroll22">
+<div class="three" ref="three" @wheel="handleScroll1" @touchmove="handleScroll33">
   <div class="card">
     <h2 class="bai">网协干事工作证</h2>
     <div class="zqi aaa"><span class="zi">姓名</span><span class="you">{{ Worker[0].name }}</span></div><br>
@@ -60,7 +60,7 @@
   <h2>网络协会 | ACM协会</h2>
   <div class="acmlogo"></div>
 </div>
-<div class="two" ref="two" @wheel="handleScroll2" @touchmove="handleScroll11">
+<div class="two" ref="two" @wheel="handleScroll1" @touchmove="handleScroll33">
   
   <div class="tt" >
     <h2 class="ooo">点击图片刷新</h2>
@@ -154,7 +154,7 @@ import image9 from './img/9.png';
       this.$refs.three.style.height = '100vh';
     },
     handleScroll1(event){
-      if(this.isGetTop && this.isOpen && this.twoHight==0 && this.threeHeight==0){
+      if(this.isOpen){
         if(event.deltaY<0 ){
           console.log(666);
           this.$refs.three.style.height = '100vh';
@@ -257,7 +257,7 @@ import image9 from './img/9.png';
     handleScroll33(event) {
       const touch = event.touches[0]; // 获取第一个触摸点的信息
       const deltaY = touch.pageY - this.startY; // 计算Y轴滑动的距离
-      if(this.isOpen && this.isGetTop){
+      if(this.isOpen){
       if (deltaY < 0) {
         // 向上滑动
         this.isScrollingUp = true;
